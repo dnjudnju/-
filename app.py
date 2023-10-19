@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request
-from flask_wtf.csrf import CSRFProtect
+from flask_wtf import CSRFProtect
 import random
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # 秘密鍵を設定
 csrf = CSRFProtect(app)
 
 def shuffle_words(input_text):
@@ -21,5 +22,6 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True, port=8888)
+
 
 
