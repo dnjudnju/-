@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ほにゃほにゃ分節シャッフラー</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+<body>
+    <header>
+  ACT Project -NAWA-
+  
+</header>
+    <h1>ほにゃほにゃ分節シャッフラー</h1>
+    <p>シャッフルしたい分節ごとに、間にスペースを入れて入力してください。</p>
+    <p>（例）『赤い目玉のサソリ。広げた鷲の翼。青い目玉の子犬。光の蛇のとぐろ。』⇨</p>
+    <p>『赤い目玉のサソリ。 広げた鷲の翼。 青い目玉の子犬。 光の蛇のとぐろ。』</p>
+    <form method="post">
+        <textarea name="input_text" rows="4" cols="50" placeholder="テキストを入力してください"></textarea>
+        <br>
+        <input type="submit" value="シャッフル">
+    </form>
+</body>
+</html>
