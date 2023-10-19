@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
+from flask_wtf.csrf import CSRFProtect
 import random
 
 app = Flask(__name__)
+csrf = CSRFProtect(app)
 
 def shuffle_words(input_text):
     words = input_text.split()  # 単語に分割
@@ -19,4 +21,5 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True, port=8888)
+
 
